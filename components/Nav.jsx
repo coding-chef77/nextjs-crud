@@ -93,6 +93,12 @@ const Nav = () => {
             onClick={() => setToggleDropdown(false)}>
             Create Prompt
           </Link> 
+          <button type='button' onClick={() => {
+                setToggleDropdown(false)
+                signOut()               
+          }}>
+            Sign Out
+            </button>
         </div>
       )}
     </div>
