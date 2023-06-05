@@ -8,20 +8,22 @@ export const metadata = {
   description: "Discover and share the best prompts on the web.",
 };
 
-const RootLayout = ({children}) => {
+const RootLayout = ({ children }) => {
   return (
-   <html lang="en">
-    <body>
-      <div className="main">
-        <div className="gradient" />
-      </div>
-      <main className="app">
-        <Nav />
-        {children}
-      </main>
-    </body>
-   </html>  
-  )
-}
+    <html lang="en">
+      <body>
+        <Provider>
+          <div className="main">
+            <div className="gradient" />
+          </div>
+          <main className="app">
+            <Nav />
+            {children}
+          </main>
+        </Provider>
+      </body>
+    </html>
+  );
+};
 
 export default RootLayout;
